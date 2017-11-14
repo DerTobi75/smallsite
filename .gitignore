@@ -1,5 +1,7 @@
-.idea
+/.idea
 /.idea/deployment.xml
 /.idea/modules.xml
-/.idea/smallsite.xml
 /.vcs.xmd
+/.idea/smallsite.iml
+/.idea/vcs.xml
+/.idea/workspace.xml
