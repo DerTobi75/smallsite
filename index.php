@@ -24,6 +24,10 @@ switch ($myTest['p']) {
     case 'running':
         echo "Stay healthy, ...<br />";
         break;
+
+    case 'git':
+        echo "You you are becoming the next GIT Ninja, ...";
+        break;
 }
 
 
