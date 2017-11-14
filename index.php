@@ -33,7 +33,7 @@ switch ($myTest['p']) {
 
 print_r($myTest);
 
-echo "<br />" . $_GET['page'];
+echo "<br />" . $_GET['p'];
 
 $loader = new Twig_Loader_Filesystem('templates');
 $twig = new Twig_Environment($loader, array(
