@@ -1,0 +1,8 @@
+{
+    "require": {
+        "adriangibbons/php-fit-file-analysis": "^3.0",
+        "nnnick/chartjs": "^2.7",
+        "twig/twig": "~1.0",
+        "symfony/http-foundation": "^3.3"
+    }
+}

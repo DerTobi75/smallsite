@@ -1,0 +1,74 @@
+{% extends "homepage.twig" %}
+
+{% block titletag %}Mein Chart{% endblock %}
+
+{% block javascript %}
+<script src="/js/Chart.bundle.min.js"></script>
+{% endblock %}
+
+{% block content %}
+
+{{ totalTime }}<br />
+{{ tobi.total_distance }} km <br />
+{{ datum.day }} - {{ datum.date }} - {{ startTime }}<br />
+<b>{{ test }}</b>
+<br />
+<canvas id="myChart" width="1200" height="500"></canvas>
+<script>
+    var xLabels = [{{ XLabels|raw }}];
+    var targetLine = [{{ targetLine|raw }}];
+    var ctx = document.getElementById("myChart").getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: xLabels,
+            datasets: [{
+                label: 'Bar Dataset',
+                data: [6, 20, 30, 40, 35, 10, 20, 30, 25, 35],
+            }, {
+                label: 'Line Dataset',
+                data: targetLine,
+
+                // Changes this dataset to become a line
+                type: 'line'
+            }, {
+                label: 'Line Dataset',
+                data: [{
+                    x: 1,
+                    y: 5.23
+                }, {
+                    x: 3,
+                    y: 20.22
+                }, {
+                    x: 6,
+                    y: 20.22
+                }, {
+                    x: 8,
+                    y: 20.22
+                }, {
+                    x: 9,
+                    y: 38.34
+                }, {
+                    x: 10,
+                    y: 45
+                }],
+                // Changes this dataset to become a line
+                type: 'line',
+                lineTension: 0,
+                borderColor: 'red',
+                backgroundColor: 'rgba(255, 0, 0, 0.1)',
+                pointBackgroundColor: 'red',
+            }],
+        },
+        options: {
+            responsive: true,
+            spanGaps: true,
+            scales: {
+                xAxes: [{
+
+                }]
+            }
+        }
+    });
+</script>
+{% endblock %}
