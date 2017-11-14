@@ -53,7 +53,7 @@ $startTime = date('d.M.Y h:m:s', $pFFA->data_mesgs['session']['start_time']);
 $tobi = $pFFA->data_mesgs['session'];
 $day = $pFFA->data_mesgs['session']['start_time'];
 $totalTime = $pFFA->data_mesgs['session']['total_timer_time'] / 60;
-
+$kmToRun = getDistance(2000);
 
 $myDate = array('month' => date('m'), 'year' => date('Y'));
 $myDate = array('month' => '2', 'year' => '2017');
@@ -65,4 +65,4 @@ $dailyLabels = buildTargetChart('2000', $arrTester);
 
 //$tester = buildTargetChart('1200', $arrTester);
 
-echo $twig->render('chart.twig', array('totalTime' => $totalTime, 'startTime' => $startTime, 'tobi' => $tobi, 'datum' => $dayFormat, 'XLabels' => $dailyLabels['label'], 'targetLine' => $dailyLabels['targetLine']));
+echo $twig->render('chart.twig', array('kmToRun' => $kmToRun, 'totalTime' => $totalTime, 'startTime' => $startTime, 'tobi' => $tobi, 'datum' => $dayFormat, 'XLabels' => $dailyLabels['label'], 'targetLine' => $dailyLabels['targetLine']));

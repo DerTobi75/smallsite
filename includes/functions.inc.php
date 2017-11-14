@@ -24,10 +24,20 @@ function buildMyLabels($lCount) {
     return(substr($label, 0, -2));
 }
 
-function getMonthyDistance($tDistance, $mDate) {
+function getDistance($tDistance, $sDistance = 0) {
     // This needs a little bit more attention!
-    // Try to calculate also week & year, ...
-    return (round($tDistance / $mDate, 2));
+    // Try also to calculate week & year, ...
+
+    if($sDistance > 0) {
+
+    } else {
+
+        $dMonth = round($tDistance / 12);
+        $dWeek = round($tDistance / 52);
+        $distanceToRun = array('year' => $tDistance, 'month' => $dMonth, 'week' => $dWeek);
+    }
+
+    return ($distanceToRun);
 }
 
 function buildTargetChart($tDistance, $tDate) {
