@@ -25,7 +25,9 @@ function buildMyLabels($lCount) {
 }
 
 function getMonthyDistance($tDistance, $mDate) {
-
+    // This needs a little bit more attention!
+    // Try to calculate also week & year, ...
+    return (round($tDistance / $mDate, 2));
 }
 
 function buildTargetChart($tDistance, $tDate) {
