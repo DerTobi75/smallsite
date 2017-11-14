@@ -26,7 +26,7 @@ switch ($myTest['p']) {
         break;
 
     case 'git':
-        echo "You you are becoming the next GIT Ninja, ...";
+        echo "You you are becoming the next GIT Ninja, ...<br />";
         break;
 }
 
