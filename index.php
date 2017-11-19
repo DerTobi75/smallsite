@@ -30,9 +30,6 @@ switch ($myTest['p']) {
         break;
 }
 
-
-print_r($myTest);
-
 echo "<br />" . $_GET['p'];
 
 $loader = new Twig_Loader_Filesystem('templates');
