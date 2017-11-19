@@ -7,9 +7,11 @@
  */
 
 require_once 'vendor/autoload.php';
-require_once 'includes/functions.inc.php';
+require_once __DIR__ . '/includes/functions.inc.php';
 
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Finder\Finder;
+
 $request = Request::createFromGlobals();
 $uri = $request->getPathInfo();
 
@@ -17,8 +19,8 @@ $myTest = $request->query->all();
 
 
 switch ($myTest['p']) {
-    case 'tobi':
-        echo "Tobi - Learning to Code, ...<br />";
+    case 'getfit':
+        require_once __DIR__ . '/includes/fit.php';
         break;
 
     case 'running':
